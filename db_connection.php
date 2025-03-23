@@ -1,13 +1,10 @@
 <?php
-$servername = "localhost"; 
-$username = "root"; // Default XAMPP username
-$password = ""; // Default XAMPP password is empty
-$database = "reporting_app"; // Change this to your actual database name
+$host = '10.0.2.28'; // Change this
+$user = 'app_user';
+$password = 'securepassword';
+$database = 'reporting_app';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check connection
+$conn = new mysqli($host, $user, $password, $database);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
